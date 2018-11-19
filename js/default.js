@@ -32,6 +32,12 @@ document.getElementById('countdown').textContent = '現在' + counter[5] + '年'
 refresh();
 }
 
+var refresh = function(){
+	setTimeout(update, 1000);
+}
+
+update();
+
 function setCookie(c_name,value,expiredays){
 	var extime = new Date().getTime();
 	var cltime = new Date(extime + (60*60*24*1000*expiredays));
@@ -78,8 +84,4 @@ document.getElementById('remove_cookie').onsubmit = function(){
 	setCookie('lastDate', "", 0);
 };
 
-var refresh = function(){
-	setTimeout(update, 1000);
-}
 
-update();
