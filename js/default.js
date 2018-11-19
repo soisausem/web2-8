@@ -14,6 +14,7 @@ function getFileName(){
 document.getElementById('form').select.onchange = function(){
     location.href = document.getElementById('form').select.value;
   }
+
 var separate_time = function(time){
 	var sec = time.getSeconds();
 	var min = time.getMinutes();
@@ -83,4 +84,10 @@ document.getElementById('remove_cookie').onsubmit = function(){
 	setCookie('lastDate', "", 0);
 };
 
+var thmubs = document.querySelectorAll('.thumb');
+for(idx in thmubs){
+	thmubs[idx].onclick = function(){
+		document.getElementById("bigimg").src = 'img/' + this.dataset.image + '.jp@g';
+	}
+}
 
