@@ -47,7 +47,7 @@ function setCookie(c_name,value,expiredays){
 	s += c_name +"="+ escape(value);
 	s += "; path="+ location.pathname;
 	if(expiredays){
-		s += "; expires=" +exdate"; ";
+		s += "; expires=" +exdate+"; ";
 	}else{
 		s += "; ";
 	}
